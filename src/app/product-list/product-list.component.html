@@ -1,0 +1,20 @@
+<main>
+  <h3>{{ title }}</h3>
+
+  <div *ngFor="let product of products; index as i">
+    <h4>
+      <a [title]="product.name + ' details'"
+      [routerLink]="['/products', product.id]">{{ product.name }}</a>
+      <!-- L'attributo title preleva di dati con il property binding -->
+    </h4>
+    <p *ngIf="product.description">Description: {{ product.description }}</p>
+    <button type="button" (click)="share()">Share</button>
+    <app-product-alerts
+      [product]="product"
+      (notify)="onNotify()"
+    ></app-product-alerts>
+    <!-- Property Binding (Data from Parent to Child) | [nome dei dati assegnati al decoratore Input in Child.ts]="variabile dei dati contenuti nel Parent" -->
+
+    <!-- Il tipo di evento è notify, che corrisponde all'Output in componente Child e a cui viene legato il metodo in componente Parent -->
+  </div>
+</main>

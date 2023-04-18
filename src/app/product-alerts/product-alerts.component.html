@@ -1,0 +1,4 @@
+<div *ngIf="product && product.price > 700"> <!-- Questo "narrowing" esclude la possibilità che product sia undefined -->
+  <button (click)="notify.emit()">Notify Me</button>
+  <!-- L'evento è appunto l'emissione dello stesso grazie al metodo della classe in componente.ts -->
+</div>

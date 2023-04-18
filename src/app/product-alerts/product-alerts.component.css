@@ -1,0 +1,17 @@
+div {
+  display: inline;
+  
+  margin-left: 5%;
+}
+
+button {
+  border: 1px solid tomato;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  background-color: antiquewhite;
+  color: tomato;
+  margin-top: 15px;
+  font-size: 0.9em;
+  cursor: pointer;
+  font-family: inherit;
+}
